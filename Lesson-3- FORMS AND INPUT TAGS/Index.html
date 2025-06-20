@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form tag and Input types</title>
+    <style>
+        *{
+            color: white;
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+            border: 3px solid #ffffff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <H1 align="center">Forms and Input tags</H1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <label for="cities"></label>
+        <select id="cities" name="cities">
+            <option value="newyork">New York</option>
+            <option value="losangeles">Los Angeles</option>
+            <option value="chicago">Chicago</option>
+            <option value="houston">Houston</option>
+            <option value="miami">Miami</option>
+        </select>
+        <br><br>
+        <label for="gender"></label>
+        <input type="radio" id="gender">Male
+        <label for="gender"></label>
+        <input type="radio" id="gender">Male
+        <br><br>
+        Phone no. <input type="number" id="no." placeholder="Enter your phone number"> <br><br>
+        Upload your identity  <input type="file" id="fileUpload" name="fileUpload" accept=".jpg, .jpeg, .png">
+        <br><br>
+        <input type="text" id="Comments" name="Comments" placeholder="Enter your comments here..." height="100"
+            width="200">
+    </form>
+</body>
+
+</html>
