@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #000000;
+        }
+
+        h3 {
+            color: #000000;
+        }
+
+        p {
+            margin-bottom: 10px;
+            background-color: rgb(197, 192, 192);
+            border-left: 5px solid blue;
+        }
+        div
+        {
+            height: 100px;
+            width: 100px;
+        }
+        #border {
+            border: 5px solid red;
+            background-color: lightblue;
+            
+        }
+        #padding {
+            padding: 50px;
+            background-color: lightgreen;
+        }
+        #margin {
+            margin: 100px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center">Box model</h1>
+    <p>The CSS box model is a fundamental concept in web design and layout. It describes the rectangular boxes generated
+        for elements in the document tree and consists of margins, borders, padding, and the actual content area.</p>
+    <h3>Border</h3>
+    <p>The border is the area around the padding (if any) and the content. It is the outermost layer of the box model
+        and can be styled using CSS properties such as border-width, border-style, and border-color.</p>
+    <div id="border">Hey i am a border</div>
+    <h3>Padding</h3>
+    <p>Padding is the space between the content and the border. It creates an inner buffer around the content, ensuring
+        that the text or other elements do not touch the border directly. Padding can be controlled using the CSS
+        properties padding-top, padding-right, padding-bottom, and padding-left.</p>
+    <div id="padding">Hey i am a padding</div>
+    <h3>Margin</h3>
+    <p>Margin is the space outside the border. It creates a buffer between the element and its surrounding elements.
+        Margins can be controlled using the CSS properties margin-top, margin-right, margin-bottom, and margin-left.</p>
+    <div id="margin">Hey i am a margin</div>
+</body>
+
+</html>
