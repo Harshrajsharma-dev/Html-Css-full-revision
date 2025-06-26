@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .css-units-notes {
+  background-color: #f9f9fc;
+  padding: 24px;
+  border-radius: 12px;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+.css-units-notes h1 {
+  color: #fd068e;
+  border-bottom: 2px solid #f305df;
+  padding-bottom: 6px;
+  text-shadow: gray 1px 1px 2px;
+  text-align: center;
+}
+
+.css-units-notes h3 {
+  margin-top: 1.4em;
+  color: #800080;
+}
+
+.css-units-notes h4 {
+  margin-top: 1em;
+  font-weight: 600;
+  color: #5a0099;
+}
+
+.css-units-notes code {
+  background-color: #eee;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+}
+
+.css-units-notes table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.css-units-notes table, th, td {
+  border: 1px solid #ccc;
+}
+
+.css-units-notes th, td {
+  padding: 8px 10px;
+  text-align: left;
+}
+
+    </style>
+</head>
+<body>
+    <div class="css-units-notes">
+  <h1>CSS Sizing Units</h1>
+
+  <h3>1. Absolute Unit: <code>px</code></h3>
+  <p><strong>Pixels (<code>px</code>)</strong> represent fixed sizes. Best used for elements where consistent dimensions are needed—like borders, icons, or fixed-width layouts.</p>
+
+  <h3>2. Relative Units</h3>
+
+  <h4><code>em</code></h4>
+  <p>Relative to the font-size of the parent element. For example, if the parent has <code>font-size: 16px</code>, then <code>2em</code> equals <code>32px</code>.</p>
+
+  <h4><code>rem</code></h4>
+  <p>Relative to the root <code>&lt;html&gt;</code> font size. Ensures consistent sizing across the entire document and is great for global responsiveness.</p>
+
+  <h3>3. Viewport Units</h3>
+
+  <h4><code>vh</code> & <code>vw</code></h4>
+  <ul>
+    <li><code>1vh</code> = 1% of the viewport height</li>
+    <li><code>1vw</code> = 1% of the viewport width</li>
+  </ul>
+  <p>Best for responsive full-screen sections, hero banners, and adaptive typography.</p>
+
+  <h3>4. Percentages <code>%</code></h3>
+  <p>Relative to the size of the parent container. Commonly used for width, padding, and margins in fluid layouts.</p>
+
+  <h3>5. When to Use Each Unit</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Unit</th>
+        <th>Use Case</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>px</code></td>
+        <td>Precise control (e.g., icons, borders)</td>
+      </tr>
+      <tr>
+        <td><code>em</code></td>
+        <td>Nesting & scalable components</td>
+      </tr>
+      <tr>
+        <td><code>rem</code></td>
+        <td>Global scaling & consistent layout</td>
+      </tr>
+      <tr>
+        <td><code>vh</code> / <code>vw</code></td>
+        <td>Full-screen sections & responsive spacing</td>
+      </tr>
+      <tr>
+        <td><code>%</code></td>
+        <td>Flexible layouts relative to parent</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>6. Additional Units</h3>
+  <ul>
+    <li><code>vmin</code> – based on the smaller of viewport height/width</li>
+    <li><code>vmax</code> – based on the larger of viewport height/width</li>
+    <li><code>ch</code>, <code>ex</code> – font-based units (less common)</li>
+  </ul>
+
+  <h3>✅ Summary</h3>
+  <p>
+    <strong>Absolute:</strong> <code>px</code> → fixed size<br>
+    <strong>Relative:</strong> <code>em</code>, <code>rem</code> → font-based<br>
+    <strong>Viewport:</strong> <code>vh</code>, <code>vw</code> → screen-based<br>
+    <strong>Percentage:</strong> <code>%</code> → relative to parent
+  </p>
+</div>
+
+</body>
+</html>
