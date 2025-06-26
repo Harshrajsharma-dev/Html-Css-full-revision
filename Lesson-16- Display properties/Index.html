@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .css-display-notes {
+  font-family: Arial, sans-serif;
+  padding: 24px;
+  background-color: #fdfdfe;
+  line-height: 1.6;
+}
+
+.css-display-notes h2 {
+  color: #4B0082;
+  margin-bottom: 16px;
+}
+
+.css-display-notes h3 {
+  margin-top: 24px;
+  color: #800080;
+}
+
+.css-display-notes p {
+  margin-bottom: 10px;
+}
+
+.inline-demo {
+  display: inline;
+  background-color: #ffe0f0;
+  padding: 5px 10px;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+.block-box {
+  display: block;
+  background-color: #ffd6d6;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+.inline-block-container .inline-box {
+  display: inline-block;
+  background-color: #d1ffd6;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 5px;
+  width: 120px;
+}
+
+.flex-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.flex-box {
+  background-color: #dcd0ff;
+  flex: 1 1 120px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.grid-box {
+  background-color: #c0f0ff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.hidden-box {
+  display: none;
+}
+
+    </style>
+</head>
+<body>
+    <div class="css-display-notes">
+  <h2>CSS Display Property with Live Examples</h2>
+
+  <h3>1. <code>display: inline</code></h3>
+  <p>Displays elements side by side without allowing width/height to be set.</p>
+  <div>
+    <span class="inline-demo">Inline 1</span>
+    <span class="inline-demo">Inline 2</span>
+    <span class="inline-demo">Inline 3</span>
+  </div>
+
+  <h3>2. <code>display: block</code></h3>
+  <p>Each block-level element starts on a new line and takes full width.</p>
+  <div class="block-box">Block 1</div>
+  <div class="block-box">Block 2</div>
+  <div class="block-box">Block 3</div>
+
+  <h3>3. <code>display: inline-block</code></h3>
+  <p>Elements stay inline like <code>inline</code> but allow width and height.</p>
+  <div class="inline-block-container">
+    <div class="inline-box">Inline-Block 1</div>
+    <div class="inline-box">Inline-Block 2</div>
+    <div class="inline-box">Inline-Block 3</div>
+  </div>
+
+  <h3>4. <code>display: flex</code></h3>
+  <p>Makes the container a flex box—children align horizontally (by default) with flexible sizing.</p>
+  <div class="flex-container">
+    <div class="flex-box">Flex 1</div>
+    <div class="flex-box">Flex 2</div>
+    <div class="flex-box">Flex 3</div>
+    <div class="flex-box">Flex 4</div>
+  </div>
+
+  <h3>5. <code>display: grid</code></h3>
+  <p>Enables a grid layout with rows and columns.</p>
+  <div class="grid-container">
+    <div class="grid-box">Grid 1</div>
+    <div class="grid-box">Grid 2</div>
+    <div class="grid-box">Grid 3</div>
+    <div class="grid-box">Grid 4</div>
+  </div>
+
+  <h3>6. <code>display: none</code></h3>
+  <p>This div is hidden using <code>display: none</code> and doesn't appear in layout.</p>
+  <div class="hidden-box">You shouldn't see this!</div>
+</div>
+
+</body>
+</html>
