@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshrajsharma-dev</title>
+    <style>
+        .css-shadow-outline-notes {
+            background-color: #fdfdfe;
+            padding: 24px;
+            font-family: Arial, sans-serif;
+            border-radius: 12px;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .css-shadow-outline-notes h2 {
+            color: #4B0082;
+            margin-bottom: 16px;
+        }
+
+        .css-shadow-outline-notes h3 {
+            margin-top: 24px;
+            color: #800080;
+        }
+
+        .css-shadow-outline-notes code {
+            background-color: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "Courier New", monospace;
+        }
+
+        .css-shadow-outline-notes pre {
+            background-color: #f0f0f5;
+            padding: 10px;
+            border-left: 3px solid #888;
+            overflow-x: auto;
+            border-radius: 6px;
+        }
+
+        /* Examples Styling */
+        .box-shadow-example,
+        .inset-shadow-example,
+        .multi-shadow-example,
+        .outline-example,
+        .outline-offset-example {
+            width: 200px;
+            padding: 20px;
+            margin: 16px 0;
+            background-color: #fff;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        /* Specific Effects */
+        .box-shadow-example {
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .inset-shadow-example {
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .multi-shadow-example {
+            box-shadow:
+                2px 2px 5px rgba(0, 0, 0, 0.3),
+                inset 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+
+        .outline-example {
+            outline: 3px dashed blue;
+        }
+
+        .outline-offset-example {
+            outline: 3px solid green;
+            outline-offset: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="css-shadow-outline-notes">
+        <h2>CSS Shadows and Outlines</h2>
+
+        <h3>1. Box Shadow (<code>box-shadow</code>)</h3>
+        <p>Used to add drop shadows to elements. Syntax:</p>
+        <pre><code>box-shadow: h-offset v-offset blur-radius spread-radius color;</code></pre>
+        <p><strong>Example:</strong></p>
+        <pre><code>box-shadow: 4px 4px 10px rgba(0,0,0,0.3);</code></pre>
+        <div class="box-shadow-example">Box Shadow</div>
+
+        <h3>2. Inset Shadow</h3>
+        <p>Use <code>inset</code> to create inner shadows:</p>
+        <pre><code>box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5);</code></pre>
+        <div class="inset-shadow-example">Inset Shadow</div>
+
+        <h3>3. Multiple Shadows</h3>
+        <p>You can apply more than one shadow by separating them with commas:</p>
+        <pre><code>box-shadow: 
+  2px 2px 5px rgba(0,0,0,0.3),
+  inset 0 0 8px rgba(255,255,255,0.5);</code></pre>
+        <div class="multi-shadow-example">Multiple Shadows</div>
+
+        <h3>4. Outline vs Border</h3>
+        <ul>
+            <li><strong>Border:</strong> Part of box model, affects layout and size.</li>
+            <li><strong>Outline:</strong> Drawn outside element’s edge, doesn't affect layout.</li>
+        </ul>
+        <pre><code>outline: 3px dashed blue;</code></pre>
+        <div class="outline-example">Outlined Box</div>
+
+        <h3>5. Outline Offset</h3>
+        <p>Use <code>outline-offset</code> to move the outline away from the element:</p>
+        <pre><code>outline-offset: 4px;</code></pre>
+        <div class="outline-offset-example">Offset Outline</div>
+
+        <h3>6. Use Cases</h3>
+        <ul>
+            <li><code>box-shadow</code>: Adds visual depth (e.g., cards, buttons)</li>
+            <li><code>inset</code>: Inner effects for pressed UI</li>
+            <li><code>outline</code>: Useful for focus states (accessibility)</li>
+            <li><code>outline-offset</code>: Adds space between element and outline</li>
+        </ul>
+
+        <h3>✅ Summary</h3>
+        <p>
+            <strong><code>box-shadow</code></strong> = shadow effects<br>
+            <strong><code>inset</code></strong> = inner shadow<br>
+            <strong><code>outline</code></strong> = non-intrusive focus border<br>
+            <strong><code>outline-offset</code></strong> = spacing from element
+        </p>
+    </div>
+
+</body>
+
+</html>
