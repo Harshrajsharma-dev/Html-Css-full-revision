@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css specificity</title>
+    <style>
+        .css-specificity-notes {
+            background-color: #f8f8fc;
+            padding: 20px;
+            border-radius: 12px;
+            font-family: "Segoe UI", sans-serif;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .css-specificity-notes h1 {
+            color: #4B0082;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+
+        .css-specificity-notes h3 {
+            color: #800080;
+            margin-top: 1.2em;
+        }
+
+        .css-specificity-notes pre {
+            background: #efefef;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .css-specificity-notes code {
+            background-color: #eaeaea;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: "Courier New", monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="css-specificity-notes">
+        <h1>CSS Specificity & Cascade</h1>
+
+        <h3>1. What is CSS Specificity?</h3>
+        <p>Specificity determines which CSS rule takes precedence when multiple rules apply to the same element.</p>
+        <ul>
+            <li><strong>Inline styles</strong> – highest specificity</li>
+            <li><strong>ID selectors</strong> – 100 points</li>
+            <li><strong>Class, attribute, pseudo-class selectors</strong> – 10 points</li>
+            <li><strong>Element and pseudo-element selectors</strong> – 1 point</li>
+        </ul>
+
+        <h3>2. How to Calculate Specificity</h3>
+        <pre><code>#nav ul li a        → 100 + 1 + 1 + 1 = 103
+.nav-link:hover    → 10 + 10 = 20
+a                  → 1
+</code></pre>
+        <p>Higher specificity wins. If equal, later rule in the source wins.</p>
+
+        <h3>3. The Cascade: Four Stages</h3>
+        <ol>
+            <li><strong>Importance</strong> – <code>!important</code> overrides all</li>
+            <li><strong>Origin</strong> – Browser default → User → Author styles</li>
+            <li><strong>Specificity</strong> – Higher specificity wins</li>
+            <li><strong>Source order</strong> – Later styles override earlier ones</li>
+        </ol>
+
+        <h3>4. Selector Types & Examples</h3>
+        <ul>
+            <li><code>style="..."</code> → Inline style</li>
+            <li><code>#header</code> → ID selector</li>
+            <li><code>.btn</code>, <code>[type="text"]</code>, <code>:hover</code> → Class/attribute/pseudo-class</li>
+            <li><code>p</code>, <code>::after</code> → Element/pseudo-element</li>
+        </ul>
+
+        <h3>5. Common Conflicts</h3>
+        <ul>
+            <li>ID selectors override class selectors</li>
+            <li>Inline styles override stylesheet rules (unless overridden by <code>!important</code>)</li>
+            <li>Overly specific selectors lead to maintenance issues</li>
+        </ul>
+
+        <h3>6. Best Practices</h3>
+        <ul>
+            <li>Use low-specificity selectors (class > ID)</li>
+            <li>Avoid deep nesting and inline styles</li>
+            <li>Use <code>!important</code> only when truly needed</li>
+            <li>Keep CSS modular and readable</li>
+        </ul>
+
+        <h3>7. Cascade in Practice</h3>
+        <p>Final style = Importance → Origin → Specificity → Source Order</p>
+        <p>Reordering rules can impact output—organize CSS thoughtfully.</p>
+
+        <h3>✅ Summary</h3>
+        <p>Specificity + Cascade + Source Order = Style that gets applied. Use class-based, maintainable CSS for cleaner
+            code.</p>
+    </div>
+
+</body>
+
+</html>
