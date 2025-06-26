@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css fonts and colors</title>
+    <style>
+        h1{
+            font-size: 100px;
+            text-align: center;
+            color: black;
+            text-shadow: 2px 2px 4px black;
+            font-family: Arial, sans-serif;
+        }
+        h1:hover{
+            color: white;
+            text-shadow: 2px 2px 4px gray;
+            cursor: pointer;
+        }
+        .font-notes {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.font-notes h2 {
+  color: #4B0082;
+}
+
+.font-notes h3 {
+  color: #800080;
+  margin-top: 1.2em;
+}
+
+.font-notes pre {
+  background-color: #eaeaea;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Css fonts and colors</h1>
+    <div class="font-notes">
+  <h2>CSS Font, Text & Color Properties</h2>
+
+  <h3>1. Font Basics</h3>
+  <p>Use <code>font-family</code> to specify the typeface, with fallbacks:</p>
+  <pre><code>font-family: "Roboto", Arial, sans-serif;</code></pre>
+  <p>The browser picks the first available font from the list.</p>
+
+  <h3>2. Font Weight & Style</h3>
+  <p><code>font-weight</code> controls thickness: normal (400), bold (700), or numeric (100–900).</p>
+  <p><code>font-style</code> offers options like <em>italic</em>, <em>oblique</em>, or <em>normal</em>.</p>
+
+  <h3>3. Font Size</h3>
+  <p>Use relative units like <code>em</code> or <code>rem</code> for scalable text.</p>
+  <p>Absolute units like <code>px</code> set fixed size.</p>
+
+  <h3>4. Line Height & Letter Spacing</h3>
+  <p><code>line-height</code> improves readability by controlling vertical spacing.</p>
+  <p><code>letter-spacing</code> adjusts spacing between individual letters.</p>
+
+  <h3>5. Font Color</h3>
+  <p>Define text color with <code>color</code> using hex (<code>#333</code>), rgb (<code>rgb(51,51,51)</code>), or named colors (<code>black</code>).</p>
+
+  <h3>6. Including External Fonts</h3>
+  <p>Use Google Fonts via a <code>&lt;link&gt;</code> in <code>&lt;head&gt;</code>:</p>
+  <pre><code>&lt;link href="https://fonts.googleapis.com/css?family=Roboto:wght@400;700" rel="stylesheet"&gt;</code></pre>
+  <p>Then apply it with CSS:</p>
+  <pre><code>body {
+  font-family: "Roboto", sans-serif;
+}</code></pre>
+
+  <h3>7. Text Transformations</h3>
+  <p><code>text-transform</code> controls capitalization: <code>uppercase</code>, <code>lowercase</code>, <code>capitalize</code></p>
+
+  <h3>8. Decorative Text Properties</h3>
+  <p><code>text-decoration</code> adds styles like <code>underline</code>, <code>line-through</code></p>
+  <p><code>text-shadow</code> adds depth and emphasis.</p>
+</div>
+
+</body>
+</html>
