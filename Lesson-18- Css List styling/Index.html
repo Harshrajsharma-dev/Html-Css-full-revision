@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS List Styling Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #4B0082;
+    }
+    .section {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 5px solid #800080;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    pre {
+      background-color: #f0f0f0;
+      padding: 10px;
+      overflow-x: auto;
+    }
+    code {
+      color: #c7254e;
+      font-family: monospace;
+    }
+    ul.example, ol.example {
+      margin-left: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📘 Styling Lists using CSS</h1>
+
+  <div class="section">
+    <h2>1. Default List Types</h2>
+    <ul>
+      <li><strong>Unordered List (&lt;ul&gt;):</strong> Uses bullets by default.</li>
+      <li><strong>Ordered List (&lt;ol&gt;):</strong> Uses numbers by default.</li>
+    </ul>
+
+    <h3>Example:</h3>
+    <ul class="example">
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Cherry</li>
+    </ul>
+
+    <ol class="example">
+      <li>First Step</li>
+      <li>Second Step</li>
+      <li>Third Step</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>2. Changing List Style Type</h2>
+    <p>Use <code>list-style-type</code> to change bullet or number type.</p>
+    <pre><code>ul {
+  list-style-type: square;
+}
+ol {
+  list-style-type: upper-roman;
+}</code></pre>
+
+    <h3>Example:</h3>
+    <ul class="example" style="list-style-type: square;">
+      <li>Dog</li>
+      <li>Cat</li>
+    </ul>
+    <ol class="example" style="list-style-type: upper-roman;">
+      <li>Alpha</li>
+      <li>Beta</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>3. Removing List Markers</h2>
+    <p>To remove bullets or numbers:</p>
+    <pre><code>ul {
+  list-style-type: none;
+}</code></pre>
+
+    <h3>Example:</h3>
+    <ul class="example" style="list-style-type: none;">
+      <li>No bullet 1</li>
+      <li>No bullet 2</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>4. Using Image as Marker</h2>
+    <p>Use <code>list-style-image</code> with a path to your image.</p>
+    <pre><code>ul {
+  list-style-image: url('check.png');
+}</code></pre>
+
+    <p><em>Note: Replace 'check.png' with your actual image path.</em></p>
+  </div>
+
+  <div class="section">
+    <h2>5. Marker Position</h2>
+    <p>Use <code>list-style-position</code> to place the bullet inside or outside the content box.</p>
+    <pre><code>ul {
+  list-style-position: inside;
+}</code></pre>
+
+    <h3>Example:</h3>
+    <ul class="example" style="list-style-position: inside;">
+      <li>Inside Position</li>
+      <li>Aligned with text</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>6. Shorthand Property</h2>
+    <p>You can use the <code>list-style</code> shorthand to combine type, position, and image.</p>
+    <pre><code>ul {
+  list-style: square inside url('icon.png');
+}</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>7. Quick Tips</h2>
+    <ul>
+      <li>Always use semantic list tags: <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;dl&gt;</code>.</li>
+      <li>Use CSS for styling lists instead of adding unnecessary HTML.</li>
+      <li>Ensure your list markers and icons render consistently across browsers.</li>
+    </ul>
+  </div>
+
+</body>
+</html>
