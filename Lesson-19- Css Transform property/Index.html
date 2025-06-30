@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transform Examples</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background: #b9048c;
+            color: #fff;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.5s ease;
+        }
+
+        .rotate:hover {
+            transform: rotate(45deg);
+            cursor: pointer;
+        }
+
+        .scale:hover {
+            transform: scale(1.5);
+            cursor: pointer;
+        }
+
+        .translate:hover {
+            transform: translate(50px, 20px);
+            cursor: pointer;
+        }
+
+        .skew:hover {
+            transform: skew(20deg, 10deg);
+            cursor: pointer;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">CSS Transform Examples</h1>
+    <section class="main">
+        <div class="box rotate">Rotate</div>
+        <div class="box scale">Scale</div>
+        <div class="box translate">Translate</div>
+        <div class="box skew">Skew</div>
+    </section>
+    <div style="padding: 20px; background: #f5f5f5; border-radius: 10px; font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; text-shadow: gray 1px 1px 2px;">🔄 CSS Transform Functions</h2>
+
+        <div style="margin-bottom: 10px;">
+            <strong>translate(x, y):</strong> Move the element in X and/or Y axes.
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <strong>scale(x, y):</strong> Resize proportionally or independently along axes.
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <strong>rotate(angle):</strong> Rotate around the Z-axis; angles can be in <code>deg</code>,
+            <code>rad</code>, or <code>turn</code>.
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <strong>skew(ax, ay):</strong> Shear the element in X and/or Y directions.
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <strong>Chaining transforms:</strong> You can chain multiple transforms; <em>order matters</em> (e.g.,
+            <code>translate</code> then <code>rotate</code> ≠ <code>rotate</code> then <code>translate</code>).
+        </div>
+    </div>
+
+</body>
+
+</html>
