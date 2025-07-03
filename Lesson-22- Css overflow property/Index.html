@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Overflow Demo</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 150px;
+            border: 2px solid #333;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .overflow-visible {
+            overflow: visible;
+            background: #e0f7fa;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+            background: #ffe0b2;
+        }
+
+        .overflow-scroll {
+            overflow: scroll;
+            background: #e1bee7;
+        }
+
+        .overflow-auto {
+            overflow: auto;
+            background: #c8e6c9;
+        }
+
+        .inner-box {
+            width: 400px;
+            height: 200px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .overflow-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .overflow-scroll::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 150px;
+            align-items: center;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 align="center" style="color: violet; text-shadow: pink 1px 1px;">CSS Overflow Property Examples</h1>
+    <div class="main">
+        <div class="container overflow-visible">
+            <h2>overflow: visible</h2>
+
+            <div class="inner-box">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi odit maxime error ad, repudiandae
+                maiores a pariatur voluptate quod amet officia nam, doloribus iusto esse at cumque sit fuga nihil dicta
+                porro aperiam. Perferendis veniam quaerat molestiae odio consectetur, blanditiis soluta dicta dolorem
+                dignissimos vel quia eveniet facere ratione, illo nemo. Aperiam debitis similique cupiditate qui
+                voluptatibus. Rerum consectetur consequuntur, aspernatur vero quisquam necessitatibus pariatur eaque,
+                modi, ipsum ipsa ab dolore voluptates. Magnam ad aperiam ut dolorum libero vitae. Fuga quas adipisci
+                quos dolore reprehenderit, vitae sapiente sint ex dicta aut maxime ad eos labore ut illo tenetur et.
+                Doloribus voluptates maiores enim at eos eum aut illo a, corrupti esse soluta debitis vel itaque
+                mollitia eveniet consectetur excepturi? Sed suscipit laudantium animi.
+            </div>
+        </div>
+
+
+        <div class="container overflow-hidden">
+            <h2>overflow: hidden</h2>
+
+            <div class="inner-box">
+                This content is clipped. You won't see scrollbars; the overflow is hidden.
+            </div>
+        </div>
+
+
+        <div class="container overflow-scroll">
+            <h2>overflow: scroll</h2>
+
+            <div class="inner-box">
+                This always shows scrollbars, even if content fits.
+            </div>
+        </div>
+
+
+        <div class="container overflow-auto">
+            <h2>overflow: auto</h2>
+
+            <div class="inner-box">
+                This shows scrollbars only when content overflows the box.
+            </div>
+        </div>
+
+</body>
+
+</html>
