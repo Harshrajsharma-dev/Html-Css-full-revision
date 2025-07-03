@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables Demo</title>
+  <style>
+    /* Global variables defined in :root */
+    :root {
+      --main-bg-color: #3498db;
+      --secondary-bg: #2ecc71;
+      --text-color: #ffffff;
+      --padding: 20px;
+      --radius: 8px;
+    }
+
+    body {
+      background-color: var(--main-bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      padding: var(--padding);
+    }
+
+    .card {
+      background-color: var(--secondary-bg);
+      padding: var(--padding);
+      border-radius: var(--radius);
+      margin: calc(var(--padding) / 2) 0;
+    }
+
+    .card h2 {
+      margin-top: 0;
+    }
+
+    /* Local override on a specific section */
+    .theme-dark {
+      --main-bg-color: #2c3e50;
+      --secondary-bg: #34495e;
+      --text-color: #ecf0f1;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Variables Demo 🎨</h1>
+
+  <div class="card">
+    <h2>Primary Theme</h2>
+    <p>This card uses the default CSS variables from <code>:root</code>.</p>
+  </div>
+
+  <div class="theme-dark">
+    <div class="card">
+      <h2>Dark Theme Override</h2>
+      <p>This card overrides the variables locally, demonstrating theme switches.</p>
+    </div>
+  </div>
+</body>
+</html>
