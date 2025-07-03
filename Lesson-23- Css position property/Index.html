@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Position Demo</title>
+    <style>
+        .wrapper {
+            border: 2px solid #333;
+            margin: 20px;
+            padding: 10px;
+            height: 200px;
+            position: relative;
+        }
+
+        .key {
+            background: #f0f0f0;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .static {
+            position: static;
+            background: #e3f2fd;
+        }
+
+        .relative {
+            position: relative;
+            top: 10px;
+            left: 20px;
+            background: #fce4ec;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 40px;
+            right: 10px;
+            width: 100px;
+            background: #e8f5e9;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background: #fff3e0;
+            padding: 8px;
+            z-index: 1000;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            background: #ede7f6;
+            padding: 5px;
+            border-bottom: 1px dashed #666;
+        }
+
+        .content {
+            height: 600px;
+            background: #fafafa;
+            margin-top: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 align="center" style="font-weight: bold;">CSS position Property</h1>
+
+    <div class="wrapper static">
+        <div class="key">position: static (default)</div>
+        Static elements stay in normal document flow. `top/left` have no effect.
+    </div>
+
+    <div class="wrapper relative">
+        <div class="key">position: relative; top:10px; left:20px;</div>
+        Relative moves the box from its normal position; still occupies original space.
+    </div>
+
+    <div class="wrapper">
+        <div class="absolute">position: absolute;</div>
+        Absolutely positioned relative to the nearest ancestor with `position`.
+        Doesn't affect other elements' layout.
+    </div>
+
+    <div class="wrapper">
+        <div class="sticky">position: sticky; top: 0;</div>
+        Scroll down within this wrapper and the heading will stick to the top.
+        <div class="content">Scroll content goes here...</div>
+    </div>
+
+    <div class="fixed">
+        position: fixed; stays here on the viewport even when page scrolls.
+    </div>
+
+</body>
+
+</html>
