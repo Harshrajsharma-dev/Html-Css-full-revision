@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Float & Clear Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .container {
+      border: 2px solid #333;
+      padding: 15px;
+      margin-bottom: 30px;
+    }
+    .box {
+      width: 120px;
+      height: 120px;
+      background: #81d4fa;
+      margin: 5px;
+    }
+    /* Float to the left */
+    .float-left {
+      float: left;
+    }
+    /* Float to the right */
+    .float-right {
+      float: right;
+      background: #ffab91;
+    }
+    /* Clear both */
+    .clear-both {
+      clear: both;
+      background: #c5e1a5;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Float & Clear Examples</h1>
+
+  <div class="container clearfix">
+    <div class="box float-left">Float Left</div>
+    <p>
+      This paragraph wraps around the floating box on the left. Floats remove elements
+      from normal flow while still allowing inline wrapping.
+    </p>
+  </div>
+
+  <div class="container clearfix">
+    <div class="box float-right">Float Right</div>
+    <p>
+      Here, the box floats right and the paragraph wraps on the left side.
+    </p>
+  </div>
+
+  <div class="container clearfix">
+    <div class="box float-left">Left Float</div>
+    <div class="box float-right">Right Float</div>
+    <div class="clear-both">This element clears both floats—so it appears below.</div>
+  </div>
+</body>
+</html>
